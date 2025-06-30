@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge dom & événement</title>
+    <style>
+      body {
+        font-size: xx-large;
+        text-align: center;
+        padding: 6%;
+      }
+
+      h1 {
+      }
+
+      #btn {
+        background-color: rgba(233, 134, 134, 0.808);
+        padding: 1%;
+        font-size: 2rem;
+        border-radius: 20px;
+      }
+      #btn:hover {
+        cursor: pointer;
+        background-color: #83c0f8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bienvenu</h1>
+    <button id="btn">Cliquez-moi !</button>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        // btn.textContent = "Vous avez cliqué !";
+        document.querySelector("h1").textContent = "Vous avez cliqué !";
+        btn.style.backgroundColor = "green";
+      });
+      btn.addEventListener("mouseenter", () => {
+        btn.style.marginTop = "10%";
+      });
+    </script>
+  </body>
+</html>
